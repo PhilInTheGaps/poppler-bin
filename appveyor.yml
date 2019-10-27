@@ -1,6 +1,4 @@
-TAGLIB_VERSION: 0.82.0
-
-version: '{TAGLIB_VERSION}-{build}'
+version: '0.82.0-{build}'
 image: Visual Studio 2015
 
 environment:
