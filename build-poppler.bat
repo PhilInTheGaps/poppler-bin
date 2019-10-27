@@ -15,7 +15,7 @@ set FREETYPE_DIR=%CD:\=/%/freetype2/build/install
 
 set ZLIB_DIR=%CD:\=/%/zlib/build/install
 
-set PKG_CONFIG_DIR=%CD:\=/%/config/bin/pkg-config.exe
+set PKG_CONFIG_DIR=%CD:\=/%/pkg-config/bin/pkg-config.exe
 
 
 cd poppler
