@@ -16,8 +16,8 @@ copy freeglut\build\install\bin\libfreeglut.dll release\bin\libfreeglut.dll
 xcopy freeglut\include\GL release\include\GL\
 xcopy freeglut\build\lib release\lib\
 
-copy freetype2\objs\freetype.a release\lib\freetype.a
-xcopy freetype2\include release\include\ /s /e
+copy freetype2\build\install\lib\freetype.a release\lib\freetype.a
+xcopy freetype2\build\install\include\freetype2 release\include\ /s /e
 
 copy libjpeg-turbo\build\install\bin\libjpeg-62.dll release\bin\libjpeg-62.dll
 copy libjpeg-turbo\build\install\bin\libturbojpeg.dll release\bin\libturbojpeg.dll

@@ -1,36 +1,22 @@
 echo "Building poppler ..."
 
-cd openjpeg
-set OPENJPEG_DIR=%CD:\=/%/build/install
-cd ..
 
-cd libjpeg-turbo
-set LIBJPEG_DIR=%CD:\=/%/build/install
-cd ..
+set OPENJPEG_DIR=%CD:\=/%/openjpeg/build/install
 
-cd libpng
-set LIBPNG_DIR=%CD:\=/%/build/install
-cd ..
+set LIBJPEG_DIR=%CD:\=/%/libjpeg-turbo/build/install
 
-cd libtiff
-set LIBTIFF_DIR=%CD:\=/%/install
-cd ..
+set LIBPNG_DIR=%CD:\=/%/libpng/build/install
 
-cd cairo
-set CAIRO_DIR=%CD:\=/%
-cd ..
+set LIBTIFF_DIR=%CD:\=/%/libtiff/install
 
-cd freetype2
-set FREETYPE_DIR=%CD:\=/%
-cd ..
+set CAIRO_DIR=%CD:\=/%/cairo
 
-cd zlib\build\install
-set ZLIB_DIR=%CD:\=/%
-cd ..\..\..
+set FREETYPE_DIR=%CD:\=/%/freetype2/build/install
 
-cd pkg-config
-set PKG_CONFIG_DIR=%CD:\=/%/bin/pkg-config.exe
-cd ..
+set ZLIB_DIR=%CD:\=/%/zlib/build/install
+
+set PKG_CONFIG_DIR=%CD:\=/%/config/bin/pkg-config.exe
+
 
 cd poppler
 mkdir build
@@ -39,7 +25,7 @@ cd build
 
 set PKG_CONFIG_OPTIONS=-DPKG_CONFIG_EXECUTABLE=%PKG_CONFIG_DIR%
 
-set FREETYPE_OPTIONS=-DFREETYPE_INCLUDE_DIR_freetype2=%FREETYPE_DIR%/include/freetype -DFREETYPE_INCLUDE_DIR_ft2build=%FREETYPE_DIR%/include -DFREETYPE_LIBRARY=%FREETYPE_DIR%/objs/freetype.a
+set FREETYPE_OPTIONS=-DFREETYPE_INCLUDE_DIR_freetype2=%FREETYPE_DIR%/include/freetype2/freetype -DFREETYPE_INCLUDE_DIR_ft2build=%FREETYPE_DIR%/include/freetype2 -DFREETYPE_LIBRARY=%FREETYPE_DIR%/lib/freetype.a
 
 set CAIRO_OPTIONS=-DCAIRO_INCLUDE_DIR=%CAIRO_DIR%/include -DCAIRO_LIBRARY=%CAIRO_DIR%/lib/libcairo.dll.a
 
