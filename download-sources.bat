@@ -73,12 +73,20 @@ cd ..
 
 
 echo "Cloning freeglut repo ..."
-echo "https://github.com/dcnieho/FreeGLUT"
 
-git clone https://github.com/dcnieho/FreeGLUT freeglut
-cd freeglut
-git checkout tags/FG_3_2_1
-cd ..
+if "%MINGW_VERSION%" == "530_32" (
+    echo "https://www.transmissionzero.co.uk/files/software/development/GLUT/freeglut-MinGW.zip"
+
+    curl -L -o freeglut.zip https://www.transmissionzero.co.uk/files/software/development/GLUT/freeglut-MinGW.zip
+    7z x freeglut.zip
+) else (
+    echo "https://github.com/dcnieho/FreeGLUT"
+
+    git clone https://github.com/dcnieho/FreeGLUT freeglut
+    cd freeglut
+    git checkout tags/FG_3_2_1
+    cd ..
+) 
 
 
 
