@@ -13,8 +13,13 @@ environment:
     MINGW_DIR: C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin
     MINGW_VERSION: 730_64
     
+  - COMPILER_NAME: mingw-32-7.3.0-qt5-12
+    QT: C:\Qt\5.12\mingw73_32
+    MINGW_DIR: C:\Qt\Tools\mingw730_32\bin
+    MINGW_VERSION: 730_32
+    
   - COMPILER_NAME: mingw-32-5.3.0-qt5-9
-    QT: C:\Qt\5.9.7\mingw53_32
+    QT: C:\Qt\5.9\mingw53_32
     MINGW_DIR: C:\MinGW\bin
     MINGW_VERSION: 530_32
 
