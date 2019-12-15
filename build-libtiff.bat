@@ -1,6 +1,6 @@
 echo "Building libtiff ..."
 
-set ZLIB_DIR=%CD:\=/%/zlib\build\install
+set ZLIB_DIR=%CD:\=/%/zlib/build/install
 set LIBJPEG_DIR=%CD:\=/%/libjpeg-turbo/build/install
 set GLUT_DIR=%CD:\=/%/freeglut
 

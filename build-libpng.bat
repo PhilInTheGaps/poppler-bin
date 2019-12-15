@@ -1,9 +1,6 @@
 echo "Building libpng ..."
 
-cd zlib\build\install
-set ZLIB_DIR=%CD:\=/%
-cd ..\..\..
-
+set ZLIB_DIR=%CD:\=/%/zlib/build/install
 
 cd libpng
 mkdir build

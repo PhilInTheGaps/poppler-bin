@@ -1,0 +1,13 @@
+freeglut/*
+freetype2/*
+libjpeg-turbo/*
+libpng/*
+libtiff/*
+openjpeg/*
+pkg-config/*
+poppler/*
+test/*
+zlib/*
+release/*
+
+*.zip
