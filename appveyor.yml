@@ -31,18 +31,22 @@ init:
 
 install:
   - cinst yasm
+  - cmd: dir
   - cmd: call download-sources.bat
   
 configuration:
   - Release
   
 build_script:
+  - cmd: dir
   - cmd: call build-all.bat
   
 after_build:
+  - cmd: dir
   - cmd: call package-artifacts.bat
   
 test_script:
+  - cmd: dir
   - cmd: call run-tests.bat
   
 artifacts:
