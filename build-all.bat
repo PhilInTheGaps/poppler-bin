@@ -1,9 +1,9 @@
-call build-zlib.bat
-call build-openjpeg.bat
-call build-libjpeg-turbo.bat
-call build-libpng.bat
-call build-glut.bat
-call build-libtiff.bat
-call build-freetype2.bat
+call build-zlib.bat || EXIT /B 1
+call build-libjpeg-turbo.bat || EXIT /B 1
+call build-glut.bat || EXIT /B 1
+call build-libtiff.bat || EXIT /B 1
+call build-openjpeg.bat || EXIT /B 1
+call build-libpng.bat || EXIT /B 1
+call build-freetype2.bat || EXIT /B 1
 
-call build-poppler.bat
+call build-poppler.bat || EXIT /B 1

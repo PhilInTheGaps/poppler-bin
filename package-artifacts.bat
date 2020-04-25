@@ -48,7 +48,7 @@ copy zlib\build\install\bin\libzlib.dll release\bin\libzlib.dll
 xcopy zlib\build\install\include release\include\zlib\ /s /e
 xcopy zlib\build\install\lib release\lib\ /s /e
 
-copy poppler\build\install\bin\libpoppler-92.dll release\bin\libpoppler-92.dll
+copy poppler\build\install\bin\libpoppler-98.dll release\bin\libpoppler-98.dll
 copy poppler\build\install\bin\libpoppler-qt5-1.dll release\bin\libpoppler-qt5-1.dll
 xcopy poppler\build\install\include release\include\ /s /e
 copy poppler\build\install\lib\libpoppler.dll.a release\lib\libpoppler.dll.a

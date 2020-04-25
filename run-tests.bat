@@ -7,7 +7,7 @@ copy openjpeg\build\install\bin\libopenjp2.dll poppler\build\qt5\tests\libopenjp
 cd poppler\build
 
 copy qt5\src\libpoppler-qt5-1.dll qt5\tests\libpoppler-qt5-1.dll
-copy libpoppler-92.dll qt5\tests\libpoppler-92.dll
+copy libpoppler-98.dll qt5\tests\libpoppler-98.dll
 
 mingw32-make test
 

@@ -1,8 +1,13 @@
-version: '0.82.0-{build}'
+version: '0.87.0-{build}'
 image: Visual Studio 2015
 
 environment:
   matrix:
+  - COMPILER_NAME: mingw-w64-7.3.0-qt5-14
+    QT: C:\Qt\5.14\mingw73_64
+    MINGW_DIR: C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin
+    MINGW_VERSION: 730_64
+  
   - COMPILER_NAME: mingw-w64-7.3.0-qt5-13
     QT: C:\Qt\5.13\mingw73_64
     MINGW_DIR: C:\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw64\bin
@@ -28,11 +33,12 @@ init:
   - cmd: set PATH=%QT%\bin;%PATH%
   - cmd: echo %PATH%
   - cmd: dir %MINGW_DIR%
+  - cmd: set CMAKE_PREFIX_PATH=%QT%
 
 install:
   - cinst yasm
   - cmd: dir
-  - cmd: call download-sources.bat
+  - cmd: call download-all.bat
   
 configuration:
   - Release
